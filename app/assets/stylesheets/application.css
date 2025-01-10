@@ -1,0 +1,215 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* General Navigation Styles */
+ nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f8f9fa; /* Light background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+}
+
+/* Header (Logo Section) */
+nav header .logo {
+    width: 60px; /* Adjust the size of the logo */
+    height: auto;
+    border-radius: 8px; /* Optional for rounded edges */
+}
+
+/* Navigation List */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between list items */
+    font-size: 18px;
+    font-weight: 500;
+    color: #333; /* Neutral text color */
+}
+
+nav ul li span {
+    font-weight: bold;
+    color: #1b0ad4; /* Slightly darker for emphasis */
+}
+
+/* Link Section */
+nav div a.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(27, 15, 245);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Link Hover Effects */
+nav div a.nav-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight hover zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav div {
+        margin-top: 10px;
+    }
+}
+
+
+/* Main Container Styling */
+.Main {
+    display: flex;
+    flex-wrap: wrap; /* Adjusts layout on smaller screens */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 5vh;
+    width: auto;
+    height: auto;
+}
+
+/* Counter Section Styling */
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #007bff; /* Blue background */
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Adjusts to available space */
+    max-width: 400px;
+    min-width: 280px;
+    text-align: center;
+}
+
+.counter .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter .content span {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.counter .content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.counter .content button:hover {
+    background-color: #e2e6ea;
+    transform: scale(1.05);
+}
+
+/* Form Section Styling */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Adjusts to available space */
+    max-width: 400px;
+    min-width: 280px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+/* Input Fields Styling */
+form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Save Button Styling */
+form button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Main {
+        flex-direction: column; /* Stacks items vertically */
+        gap: 20px;
+    }
+
+    .counter,
+    form {
+        max-width: 100%;
+        flex: none;
+    }
+}

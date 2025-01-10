@@ -1,0 +1,23 @@
+<div class="Main">
+  <div class="counter">
+    <div class="content" data-controller="counter" data-counter-count-value="0">
+
+      <span>0</span>
+      <br>
+      <button data-action="click->counter#increment">Increment</button>
+
+    </div>
+  </div>
+
+  <form>
+    <div data-controller="greeting" >
+      <input data-greeting-target="name" type="text" placeholder="Name" />
+      <input data-greeting-target="roll" type="text" placeholder="Roll" />
+      <input data-greeting-target="dipartment" type="text" placeholder="Dipartment" />
+      <input data-greeting-target="session" type="text" placeholder="Session" />
+      <button data-action="click->greeting#greet">Save</button>
+    </div>
+
+  </form>
+
+</div>
